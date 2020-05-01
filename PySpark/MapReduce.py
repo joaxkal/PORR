@@ -1,6 +1,6 @@
 from pyspark import SparkContext, SparkConf
 
-conf = SparkConf().setMaster("local[2]").setAppName("Spark Count")
+conf = SparkConf().setAppName("Spark Count")
 spark = SparkContext(conf=conf)
 file_names = spark.textFile("hdfs:///friends/names_short.csv")
 file_rel = spark.textFile("hdfs///friends/relations_short.csv")
